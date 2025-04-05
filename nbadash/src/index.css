@@ -1,0 +1,141 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* start of my styling */
+.app-container {
+  display: flex; /* Use Flexbox to align children side by side */
+  justify-content: space-between; 
+  align-items: flex-start; /* Align items at the top */
+  padding: 20px; /* Add padding around the container */
+  gap: 20px; /* Add spacing between the two components */
+}
+
+.dashboard-container {
+  flex: 4; /* dashboard takes up 3/4 of the width */
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+.search-filter-container {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* Centers elements vertically*/
+  gap: 10px;
+
+}
+
+.stats-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.game-stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.game-stats-table th, .game-stats-table td {
+  padding: 15px;
+  text-align: center;
+}
+
+.image-panel {
+  background-color: rgba(150, 132, 132, 0.932);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-panel img {
+  height:160px;
+  width: 240px;
+  object-fit: cover; /* ensures the image fills container without distortion*/
+  padding: 10px;
+  padding-right: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.summ-container {
+  flex: 1; /* SummaryStats takes up 1/4 of the width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.stats-card {
+  background: rgba(68, 69, 105, 0.849);
+  padding: 10px;
+}
+
+
+
+
+
+
