@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import {useEffect} from 'react'
 
+import { nbaTeamEmojis } from '../teamEmojis'
+
 
 const Dashboard = ({ gamesStats }) => {
     const [input, setInput] = useState("")
@@ -35,8 +37,8 @@ const Dashboard = ({ gamesStats }) => {
                         {gamesStats.map((game, index) => (
                             <tr key={index}>
                                 <td> {game.date} </td>
-                                <td> {game.home_team.full_name} </td>
-                                <td> {game.visitor_team.full_name} </td>
+                                <td> {game.home_team.full_name} {nbaTeamEmojis[game.home_team.abbreviation]}</td>
+                                <td> {game.visitor_team.full_name} {nbaTeamEmojis[game.visitor_team.abbreviation]}</td>
                                 <td> {game.home_team_score} - {game.visitor_team_score} </td>
                                 <td> {game.status} </td>
                                 <td> {game.season} </td>

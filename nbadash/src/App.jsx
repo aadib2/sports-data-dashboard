@@ -75,7 +75,7 @@ function App() {
 
       <div className = "app-container">
         <Dashboard gamesStats={gamesStats}/>
-        <SummaryStats/>
+        <SummaryStats gamesStats={gamesStats}/>
       </div>
     </>
   )

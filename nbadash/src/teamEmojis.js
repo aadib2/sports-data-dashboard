@@ -1,32 +1,32 @@
-const teamEmojis = {
-    ATL: ':hawks:',        // Atlanta Hawks
-    BOS: ':celtics:',      // Boston Celtics
-    BKN: ':nets:',         // Brooklyn Nets
-    CHA: ':hornets:',      // Charlotte Hornets
-    CHI: ':bulls:',        // Chicago Bulls
-    CLE: ':cavaliers:',    // Cleveland Cavaliers
-    DAL: ':mavericks:',    // Dallas Mavericks
-    DEN: ':nuggets:',      // Denver Nuggets
-    DET: ':pistons:',      // Detroit Pistons
-    GSW: ':warriors:',     // Golden State Warriors
-    HOU: ':rockets:',      // Houston Rockets
-    IND: ':pacers:',       // Indiana Pacers
-    LAC: ':clippers:',     // LA Clippers
-    LAL: ':lakers:',       // Los Angeles Lakers
-    MEM: ':grizzlies:',    // Memphis Grizzlies
-    MIA: ':heat:',         // Miami Heat
-    MIL: ':bucks:',        // Milwaukee Bucks
-    MIN: ':timberwolves:', // Minnesota Timberwolves
-    NOP: ':pelicans:',     // New Orleans Pelicans
-    NYK: ':knicks:',       // New York Knicks
-    OKC: ':thunder:',      // Oklahoma City Thunder
-    ORL: ':magic:',        // Orlando Magic
-    PHI: ':76ers:',        // Philadelphia 76ers
-    PHX: ':suns:',         // Phoenix Suns
-    POR: ':trailblazers:', // Portland Trail Blazers
-    SAC: ':kings:',        // Sacramento Kings
-    SAS: ':spurs:',        // San Antonio Spurs
-    TOR: ':raptors:',      // Toronto Raptors
-    UTA: ':jazz:',         // Utah Jazz
-    WAS: ':wizards:'       // Washington Wizards
-  };
+export const nbaTeamEmojis = {
+  ATL: '🦅', // Atlanta Hawks
+  BOS: '🍀', // Boston Celtics
+  BKN: '🕶️', // Brooklyn Nets
+  CHA: '🐝', // Charlotte Hornets
+  CHI: '🐂', // Chicago Bulls
+  CLE: '🗡️', // Cleveland Cavaliers
+  DAL: '🐎', // Dallas Mavericks
+  DEN: '⛏️', // Denver Nuggets
+  DET: '🚗', // Detroit Pistons
+  GSW: '🌉', // Golden State Warriors
+  HOU: '🚀', // Houston Rockets
+  IND: '🔵', // Indiana Pacers
+  LAC: '🔴🔵', // Los Angeles Clippers
+  LAL: '💜💛', // Los Angeles Lakers
+  MEM: '🐻', // Memphis Grizzlies
+  MIA: '🔥', // Miami Heat
+  MIL: '🦌', // Milwaukee Bucks
+  MIN: '🐺', // Minnesota Timberwolves
+  NOP: '🎷', // New Orleans Pelicans
+  NYK: '🗽', // New York Knicks
+  OKC: '🌩️', // Oklahoma City Thunder
+  ORL: '🪄', // Orlando Magic
+  PHI: '🔔', // Philadelphia 76ers
+  PHX: '🌞', // Phoenix Suns
+  POR: '🌲', // Portland Trail Blazers
+  SAC: '👑', // Sacramento Kings
+  SAS: '⚔️', // San Antonio Spurs
+  TOR: '🦖', // Toronto Raptors
+  UTA: '🎵', // Utah Jazz
+  WAS: '🧙', // Washington Wizards
+};
