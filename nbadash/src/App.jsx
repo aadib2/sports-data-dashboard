@@ -16,7 +16,18 @@ function App() {
     const [gamesStats, setGamesStats] = useState([])
 
     const makeQuery = () => {
-      const query = "https://api.balldontlie.io/v1/games?dates[]=2024-01-01&dates[]=2024-01-02";
+      // make the data rendering dynamic based on date
+      const today = new Date();
+      const oneDayAgo = new Date(today);
+      const twoDaysAgo = new Date(today);
+
+      // set the dates
+      oneDayAgo.setDate(today.getDate() - 1);
+      twoDaysAgo.setDate(today.getDate()-2);
+
+      const formatDate = (date) => date.toISOString().split('T')[0];
+
+      const query = `https://api.balldontlie.io/v1/games?dates[]=${formatDate(oneDayAgo)}&dates[]=${formatDate(twoDaysAgo)}`;
       return query;
 
     }
