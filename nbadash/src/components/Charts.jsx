@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import {useEffect} from 'react'
 
-import { BarChart, Bar, LineChart, Line, CartesianGrid, XAxis, YAxis, Legend, Tooltip} from 'recharts'
+import { BarChart, Bar, LineChart, Line, CartesianGrid, XAxis, YAxis, Legend, Tooltip, ResponsiveContainer} from 'recharts'
 
 // CAN USE RESPONSIVE CONTAINER TO MAKE VISUALLY APPEALING
 
@@ -140,8 +140,7 @@ const Charts = ({gameStats}) => {
     return (
         <div className="charts-container">
             <h2> 📊 Data Visuals 📈</h2>
-             {/* first chart is going to be home/visitor team performance vs. time of day*/}
-             <h3> Home / Visitor Team Performance vs. Gametime</h3>
+            <h3> Home / Visitor Team Performance vs. Gametime</h3>
             <LineChart width={600} height={400} data={scoreAvgs}>
                 <CartesianGrid stroke="#ccc"/>
                 <XAxis dataKey="time" label={{value: "Gametime", position: "insideBottom", offset: -5}}/>
@@ -150,7 +149,6 @@ const Charts = ({gameStats}) => {
                 <Line type="monotone" dataKey="awayAvgScore" stroke="#F48D0A" strokeWidth={3}/>
                 <Tooltip/>
                 <Legend wrapperStyle={{paddingTop: "10px"}}/>
-            
             </LineChart>
             <h3> Win Count by Division </h3>
             <BarChart width={550} height={400} data={winsByDivision}>

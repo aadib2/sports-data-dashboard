@@ -141,8 +141,30 @@ button:focus-visible {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for better visuals */
 }
 
+.details-page {
+  background: #ffffff; /* White background for contrast */
+  color: #333333; /* Dark text for readability */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  flex-direction: row; 
+  padding: 20px; /* Add padding inside the card */
+  margin: 20px auto; /* Center the card with some margin */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  max-width: 1000px; /* Limit the card width */
+  text-align: left; /* Align text to the left */
+  font-family: Arial, sans-serif; /* Clean font */
+}
 
-
+.teams-data, .player-info {
+  flex: 1; /* Make both sections take equal width */
+  background: #a3dbab; /* Light background for contrast */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
 
 
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import {useEffect} from 'react'
+import {Link} from 'react-router-dom'
 
 import { nbaTeamEmojis } from '../teamEmojis'
 
@@ -87,7 +88,7 @@ const Dashboard = ({ gamesStats }) => {
                                 <td> {game.status} </td>
                                 <td> {game.season} </td>
                                 <td> {game.period} </td>
-                                <td> View 🔗</td>
+                                <td> <Link to={`/gameDetails/${game.id}`} state={{ game }} key={game.id}> View 🔗 </Link> </td>
                             </tr>
                         ))}
                     </tbody>
