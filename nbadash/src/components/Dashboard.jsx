@@ -74,6 +74,7 @@ const Dashboard = ({ gamesStats }) => {
                             <th> Game Status</th>
                             <th> Season</th>
                             <th> Period</th>
+                            <th> Details </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -86,6 +87,7 @@ const Dashboard = ({ gamesStats }) => {
                                 <td> {game.status} </td>
                                 <td> {game.season} </td>
                                 <td> {game.period} </td>
+                                <td> View 🔗</td>
                             </tr>
                         ))}
                     </tbody>

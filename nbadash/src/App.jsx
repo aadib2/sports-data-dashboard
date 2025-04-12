@@ -3,6 +3,7 @@ import {useEffect} from 'react'
 import './App.css'
 import Dashboard from './components/Dashboard'
 import SummaryStats from './components/SummaryStats';
+import Charts from './components/Charts';
 
 // import images
 import nbaImage1 from './assets/nbaimage1.jpg';
@@ -63,7 +64,7 @@ function App() {
     <>
       <div className="app-header">
         <h1> NBADash 🏀</h1>
-        <h2> Welcome sports enthusiasts! Here you can find the latest player statistics of the top players for the 2024-25 season. </h2>
+        <h2> Welcome sports enthusiasts! Here you can find the latest NBA game information, statistics, and visualizations for the 2024-25 season. </h2>
       </div>
 
       <div className="image-panel"> 
@@ -73,9 +74,11 @@ function App() {
           <img src={nbaImage4} alt='MJ'/>
         </div>
 
+      <SummaryStats gamesStats={gamesStats}/>
+
       <div className = "app-container">
         <Dashboard gamesStats={gamesStats}/>
-        <SummaryStats gamesStats={gamesStats}/>
+        <Charts gameStats={gamesStats}/>
       </div>
     </>
   )

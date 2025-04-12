@@ -6,15 +6,17 @@ const SummaryStats = ({ gamesStats }) => {
 
     const calcAvgPts = () => {
         let totalPts = 0;
+        let numFinalGames = 0;
         gamesStats.forEach((game) => {
             if(game.status == "Final") {
                 const homeTeamScore = game.home_team_score;
                 const awayTeamScore = game.visitor_team_score;
                 totalPts+=homeTeamScore+awayTeamScore;
+                numFinalGames++;
             }
         });
 
-        return (totalPts / gamesStats.length).toFixed(2); // return average rounded to 2 dec places
+        return (totalPts / numFinalGames).toFixed(2); // return average rounded to 2 dec places
     }
 
     const calcHighestScoringTeam = () => {
@@ -94,7 +96,7 @@ const SummaryStats = ({ gamesStats }) => {
     return (
         <>
             <div className="summ-container">
-                <h2> Summary Statistics: </h2>
+                <h2> 📝 Summary Statistics: </h2>
                 <div className="stats-card-container">
                     <div className = "stats-card">
                         <h3> Average Total Pts / Game</h3>

@@ -25,7 +25,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -46,19 +47,18 @@ button:focus-visible {
 /* start of my styling */
 .app-container {
   display: flex; /* Use Flexbox to align children side by side */
-  justify-content: space-between; 
+  justify-content: flex-start; 
   align-items: flex-start; /* Align items at the top */
   padding: 20px; /* Add padding around the container */
   gap: 20px; /* Add spacing between the two components */
 }
 
 .dashboard-container {
-  flex: 4; /* dashboard takes up 3/4 of the width */
+  flex: 3; /* dashboard takes up 3/5 of the width */
   display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin: 0 auto;
     padding: 20px;
     border: 2px solid white;
     border-radius: 8px;
@@ -111,7 +111,15 @@ button:focus-visible {
 }
 
 .summ-container {
-  flex: 1; /* SummaryStats takes up 1/4 of the width */
+  flex: 1; /* SummaryStats takes up 1/5 of the width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.charts-container {
+  flex: 1; /* Charts will take up 1/5 of the width */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,7 +128,7 @@ button:focus-visible {
 
 .stats-card-container {
   display: flex; /* Use Flexbox to align cards side by side */
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between; /* Add spacing between cards */
   gap: 20px; /* Add spacing between the cards */
   width: 100%; /* Ensure the container spans the full width */
