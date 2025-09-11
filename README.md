@@ -1,10 +1,8 @@
-# Web Development Project 6 - *NBA Data Dashboard - Part 2*
+# 🏈 NFL Data Dashboard 
 
-Submitted by: **Aadi Bery**
+**This web app: Dynamically displays up to date NFL game information from the past 7 days (week) in the form of a dashboard with team name and conference dynamic filtering. Includes summary statistics for the finished games and chart visualizations. Additonally, a new detail view was developed to view more details about each game and players and allow for more navigation through the site!**
 
-This web app: **Dynamically displays up to date NBA game information from the past two days in the form of a dashboard with team name and conference dynamic filtering. Includes summary statistics for the finished games and chart visualizations. Additonally, a new detail view was developed to view more details about each game and players and allow for more navigation through the site!**
-
-Time spent: **9** hours spent in total
+*Note: This is an expansion of an app created whilst in CodePath's WEB 102 course*
 
 ## Required Features
 
