@@ -11,23 +11,33 @@ const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
 
 function App() {
     const [gamesStats, setGamesStats] = useState([])
+    console.log(ACCESS_KEY);
+
+    const getLast7Dates = () => {
+      const dates = [];
+      const today = new Date();
+
+      for (let i = 0; i < 7; i++) {
+        const d = new Date(today);
+        d.setDate(today.getDate() - i);
+        dates.push(d.toISOString().split('T')[0]); // we need to format the dates to be visually appealing
+      }
+      return dates.reverse(); // so it's chronological
+  };
 
     const makeQuery = () => {
       // make the data rendering dynamic based on date
-      const today = new Date();
-      const oneDayAgo = new Date(today);
-      const twoDaysAgo = new Date(today);
+      const week = getLast7Dates();
 
-      // set the dates
-      oneDayAgo.setDate(today.getDate() - 1);
-      twoDaysAgo.setDate(today.getDate()-2);
+      // we now need to format our query string to include each date
+      const datesString = week.map(date => `dates[]=${date}`).join("&"); // in accordance with docs
+      console.log(datesString)
 
-      const formatDate = (date) => date.toISOString().split('T')[0];
-
-      const query = `https://api.balldontlie.io/v1/games?dates[]=${formatDate(oneDayAgo)}&dates[]=${formatDate(twoDaysAgo)}`;
+      const query = `https://api.balldontlie.io/nfl/v1/games?${datesString}`;
       return query;
 
     }
+    
     const callAPI = async () => {
         try {
           const query = makeQuery();

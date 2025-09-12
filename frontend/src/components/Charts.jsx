@@ -15,6 +15,7 @@ const Charts = ({gameStats}) => {
 
     // get the data we need here from gameStats for the chart
     const getScoresAtTimes = () => {
+        console.log(filteredGames);
             /* time slots will be:
                 4-5 PM
                 5-6 PM
@@ -46,6 +47,7 @@ const Charts = ({gameStats}) => {
             filteredGames.forEach((game) => {
                 const currDatetime = new Date(game.datetime);
                 const playHour = currDatetime.getHours();
+                console.log(playHour);
         
                 if (playHour >= 16 && playHour < 17) {
                     homeAvgScores["4-5 PM"] += game.home_team_score;

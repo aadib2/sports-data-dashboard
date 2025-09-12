@@ -2,7 +2,7 @@ import React, { use } from 'react';
 import { useParams } from "react-router-dom";
 import {useLocation} from 'react-router-dom'
 import {useState, useEffect} from 'react'
-import * as NBAIcons from 'react-nba-logos'
+import * as NFLIcons from 'react-nfl-logos'
 
 // get API key
 const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
@@ -19,8 +19,9 @@ const DetailsPage = () => {
     const [awayPlayers, setAwayPlayers] = useState([]);
 
       const callAPI = async () => {
+        // grab JSON of player data from either of the teams
           try {
-            const query = `https://api.balldontlie.io/v1/players?team_ids[]=${game.home_team.id}&team_ids[]=${game.visitor_team.id}&per_page=10`;
+            const query = `https://api.balldontlie.io/nfl/v1/players?team_ids[]=${game.home_team.id}&team_ids[]=${game.visitor_team.id}&per_page=10`;
             const response = await fetch(query, {
                 headers: {
                   Authorization: ACCESS_KEY, 
@@ -46,6 +47,7 @@ const DetailsPage = () => {
     }, []);
 
     const getRandomPlayers = () => {
+        // grab specific players from the home team and the away team
         const homePlayersFiltered = players.filter((player) => player.team.id === game.home_team.id);
         const awayPlayersFiltered = players.filter((player) => player.team.id === game.visitor_team.id);
     
@@ -86,6 +88,7 @@ const DetailsPage = () => {
         }
     }
 
+    // once the current game data and corresponding players changes, add effect to retrieve relevant data
     useEffect(()=> {
         if(game && players.length > 0) {
             findGameStatus();
@@ -100,8 +103,8 @@ const DetailsPage = () => {
     }
 
 
-    const HomeTeamLogo = NBAIcons[game.home_team.abbreviation];
-    const AwayTeamLogo = NBAIcons[game.visitor_team.abbreviation];
+    const HomeTeamLogo = NFLIcons[game.home_team.abbreviation];
+    const AwayTeamLogo = NFLIcons[game.visitor_team.abbreviation];
 
     return (
         <>
