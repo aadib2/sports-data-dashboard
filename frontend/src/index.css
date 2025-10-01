@@ -49,19 +49,21 @@ button:focus-visible {
   display: flex; /* Use Flexbox to align children side by side */
   justify-content: flex-start; 
   align-items: flex-start; /* Align items at the top */
-  padding: 20px; /* Add padding around the container */
+  padding: 20px 20px 20px 0; /* Add padding around the container, not putting any for left */
   gap: 20px; /* Add spacing between the two components */
 }
 
 .dashboard-container {
-  flex: 3; /* dashboard takes up 3/5 of the width */
+  flex: 3; /* dashboard takes up 2/3 of the width */
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    border: 2px solid white;
-    border-radius: 8px;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  margin-left: -20px;
+  border: 2px solid white;
+  border-radius: 8px;
 }
 
 .search-filter-container {
@@ -111,7 +113,7 @@ button:focus-visible {
 }
 
 .summ-container {
-  flex: 1; /* SummaryStats takes up 1/5 of the width */
+  flex: 1; /* SummaryStats takes up 1/3 of the width */
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -4,6 +4,7 @@ import {useEffect} from 'react'
 import {Link} from 'react-router-dom'
 
 import { nflTeamEmojis } from '../teamEmojis'
+// import { format } from "date-fns"
 
 
 const Dashboard = ({ gamesStats }) => {
@@ -57,8 +58,8 @@ const Dashboard = ({ gamesStats }) => {
                 <h3> Filter by Conference: </h3>
                 <select onChange={handleCategory}>
                     <option value = "All"> All</option>
-                    <option value="AFC"> East</option>
-                    <option value="NFC"> West </option>
+                    <option value="AFC"> AFC</option>
+                    <option value="NFC"> NFC </option>
                     <option value = "Interconference"> Interconference</option>
                 </select>
                 {/* still have to implement functionality*/}
@@ -82,7 +83,15 @@ const Dashboard = ({ gamesStats }) => {
                     <tbody>
                         {filteredGames.map((game, index) => (
                             <tr key={index}>
-                                <td> {game.date} </td>
+                                <td> {new Date(game.date).toLocaleString("en-US", {
+                                        year: "numeric",
+                                        month: "short",
+                                        day: "numeric",
+                                        hour: "numeric",
+                                        minute: "2-digit",
+                                        timeZoneName: "short"
+                                    })} 
+                                </td>
                                 <td> {game.home_team.full_name} {nflTeamEmojis[game.home_team.abbreviation]}</td>
                                 <td> {game.visitor_team.full_name} {nflTeamEmojis[game.visitor_team.abbreviation]}</td>
                                 <td> {game.home_team_score} - {game.visitor_team_score} </td>

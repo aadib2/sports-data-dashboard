@@ -90,10 +90,10 @@ const DetailsPage = () => {
 
     // once the current game data and corresponding players changes, add effect to retrieve relevant data
     useEffect(()=> {
-        if(game && players.length > 0) {
+        if(game) {// players.length > 0
             findGameStatus();
             findWinner();
-            getRandomPlayers();
+            // getRandomPlayers();
         }
 
     }, [game, players]);
@@ -117,6 +117,7 @@ const DetailsPage = () => {
                 <h3> vs. </h3>
                 <h3><strong>🛫 </strong> {game.visitor_team.full_name}  {game.visitor_team_score}</h3>
                 {AwayTeamLogo && <AwayTeamLogo size={70} />}
+                <p> <b>{game.summary} </b></p>
                 <h3> 🏆 Winner: {winner}</h3>
                 <h3><strong>Season:</strong> {game.season}</h3>
                 <h3><strong>Period:</strong> {game.period}</h3>
