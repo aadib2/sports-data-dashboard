@@ -1,6 +1,9 @@
-# 🏈 NFL Data Dashboard 
+# 🏈 NFL Data Dashboard App
 
-**This web app**:
+<img src='./app-visual.png'/>
+
+
+### This web app:
 
 Dynamically displays up to date NFL game information from the past 7 days (week) in the form of a dashboard with team name and conference dynamic filtering. Includes summary statistics for the finished games and chart visualizations. Additonally, a new detail view was developed to view more details about each game and players and allow for more navigation through the site!
 
@@ -10,7 +13,7 @@ Dynamically displays up to date NFL game information from the past 7 days (week)
 Integrating FastAPI backend and setting up database for optimized data retrieval
 
 ### Future Work:
-Integrating ML algorithm for team win probabilities
+Integrating GenAI RAG 'Sports Assistant' Chatbot (LLM) with interactive web page
 
 ## Required Features
 
@@ -43,7 +46,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented web app:
 
 <img src='nbadash/DemoGIF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
