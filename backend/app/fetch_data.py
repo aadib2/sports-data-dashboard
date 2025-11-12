@@ -37,8 +37,9 @@ def get_nfl_games():
     try:
         response = requests.get(query, headers=headers)
         response.raise_for_status()
-
         data = response.json()
+        
+        print(data) # for debugging
         return {'data': data.get('data', [])}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

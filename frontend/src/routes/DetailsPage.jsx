@@ -2,7 +2,7 @@ import React, { use } from 'react';
 import { useParams } from "react-router-dom";
 import {useLocation} from 'react-router-dom'
 import {useState, useEffect} from 'react'
-import * as NFLIcons from 'react-nfl-logos'
+// import * as NFLIcons from 'react-nfl-logos'
 
 // get API key
 const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
@@ -103,8 +103,8 @@ const DetailsPage = () => {
     }
 
 
-    const HomeTeamLogo = NFLIcons[game.home_team.abbreviation];
-    const AwayTeamLogo = NFLIcons[game.visitor_team.abbreviation];
+    // const HomeTeamLogo = NFLIcons[game.home_team.abbreviation];
+    // const AwayTeamLogo = NFLIcons[game.visitor_team.abbreviation];
 
     return (
         <>
@@ -113,10 +113,10 @@ const DetailsPage = () => {
                 <div className="teams-data">
                 <h3><strong>Date:</strong> {game.date} | Status: {status}</h3>
                 <h3><strong>🏠 </strong> {game.home_team.full_name}  {game.home_team_score}</h3>
-                {HomeTeamLogo && <HomeTeamLogo size={70}/>}
+                {/* {HomeTeamLogo && <HomeTeamLogo size={70}/>} */}
                 <h3> vs. </h3>
                 <h3><strong>🛫 </strong> {game.visitor_team.full_name}  {game.visitor_team_score}</h3>
-                {AwayTeamLogo && <AwayTeamLogo size={70} />}
+                {/* {AwayTeamLogo && <AwayTeamLogo size={70} />} */}
                 <p> <b>{game.summary} </b></p>
                 <h3> 🏆 Winner: {winner}</h3>
                 <h3><strong>Season:</strong> {game.season}</h3>
