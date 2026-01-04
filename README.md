@@ -12,9 +12,6 @@ Dynamically displays up to date NFL game information from the past 7 days (week)
 ### Work In Progress:
 Integrating FastAPI backend and setting up database for optimized data retrieval
 
-### Future Work:
-Integrating GenAI RAG 'Sports Assistant' Chatbot (LLM) with interactive web page
-
 ## Required Features
 
 The following **required** functionality is completed:
@@ -48,7 +45,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented web app:
 
-<img src='nbadash/DemoGIF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='/DemoGIF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ScreenToGif
